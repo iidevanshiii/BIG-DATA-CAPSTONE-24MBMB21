@@ -1,0 +1,121 @@
+artist,songtitle,genre,year,lyrics_snippet,valence,arousal,negativity,emotion_label,energy,danceability,acousticness,tempo,song_title,tempo_norm,Openness,Conscientiousness,Extraversion,Agreeableness,Neuroticism,personality_cluster,personality_archetype
+Jubin Nautiyal,Tum Hi Ho,Bollywood,1974, Tum Hi Ho...,0.62,0.62,0.44,Happy,0.42,0.83,0.72,147.5,,0.7375,0.634,1.0,0.6135,1.0,1.0,1,Calm Harmonizer
+Kanika Kapoor,Ghoomar,Hip-Hop,2018, Ghoomar...,0.41,0.79,0.05,Excited,0.23,0.34,0.67,148.1,,0.7404999999999999,0.319,1.0,0.3135,1.0,1.0,0,Adventurous Explorer
+Neha Kakkar,Kal Ho Naa Ho,Pop,1987, Kal Ho Naa Ho...,0.64,0.39,0.16,Party,0.53,0.41,0.16,149.5,,0.7475,0.5095000000000001,1.0,0.5155000000000001,1.0,0.9890000000000001,0,Adventurous Explorer
+Shaan,Taal Se Taal,Pop,2016, Taal Se Taal...,0.83,0.3,0.02,Hope,0.8,0.4,0.62,128.8,,0.644,0.6475,1.0,0.6675000000000001,1.0,0.849,3,Creative Dreamer
+Neha Kakkar,Pehla Nasha,Bollywood,1972, Pehla Nasha...,0.83,0.35,0.2,Excited,0.74,0.64,0.17,109.6,,0.5479999999999999,0.7225,1.0,0.7275,1.0,0.9359999999999999,1,Calm Harmonizer
+Badshah,Breathless,Traditional,2013, Breathless...,0.56,0.68,0.04,Romantic,0.66,0.21,0.48,76.0,,0.38,0.455,1.0,0.47750000000000004,1.0,1.0,0,Adventurous Explorer
+Darshan Raval,Baby Doll,Traditional,2023, Baby Doll...,0.52,0.46,0.05,Excited,0.67,0.8,0.77,83.7,,0.41850000000000004,0.6845,1.0,0.678,1.0,1.0,1,Calm Harmonizer
+Kishore Kumar,DJ Wale Babu,Bollywood,2023, DJ Wale Babu...,0.42,0.23,0.41,Romantic,0.5,0.89,0.76,121.6,,0.608,0.636,1.0,0.6165,1.0,1.0,1,Calm Harmonizer
+Mohit Chauhan,Lut Gaye,Traditional,1990, Lut Gaye...,0.89,0.48,0.79,Excited,0.34,0.51,0.76,100.9,,0.5045000000000001,0.5455,1.0,0.537,1.0,1.0,1,Calm Harmonizer
+Darshan Raval,Coca Cola,Traditional,1991, Coca Cola...,0.22,0.69,0.74,Romantic,0.51,0.59,0.11,110.7,,0.5535,0.4695,1.0,0.46549999999999997,0.899,1.0,2,Intense Rebel
+Darshan Raval,Lag Ja Gale,Hip-Hop,1994, Lag Ja Gale...,0.67,0.31,0.32,Excited,0.44,0.8,0.44,90.2,,0.451,0.6415000000000001,1.0,0.6234999999999999,1.0,1.0,1,Calm Harmonizer
+Kanika Kapoor,Chaiyya Chaiyya,Pop,1986, Chaiyya Chaiyya...,0.11,0.4,0.09,Sad,0.71,0.62,0.67,96.1,,0.4805,0.5239999999999999,1.0,0.5285,1.0,1.0,0,Adventurous Explorer
+Lata Mangeshkar,Badtameez Dil,Pop,2021, Badtameez Dil...,0.43,0.49,0.19,Sad,0.38,0.27,0.61,96.6,,0.483,0.3485,1.0,0.35400000000000004,1.0,1.0,0,Adventurous Explorer
+Alka Yagnik,Balam Pichkari,Pop,1976, Balam Pichkari...,0.21,0.51,0.48,Romantic,0.5,0.88,0.27,73.2,,0.366,0.5795,1.0,0.5605,1.0,1.0,1,Calm Harmonizer
+Darshan Raval,Genda Phool,Traditional,1992, Genda Phool...,0.41,0.43,0.6,Party,0.45,0.67,0.47,128.5,,0.6425,0.528,1.0,0.517,1.0,1.0,0,Adventurous Explorer
+Badshah,Dilbar,Pop,2019, Dilbar...,0.33,0.33,0.66,Sad,0.47,0.73,0.31,98.9,,0.49450000000000005,0.5389999999999999,1.0,0.526,1.0,1.0,1,Calm Harmonizer
+Yo Yo Honey Singh,Saudagar,Bollywood,2018, Saudagar...,0.74,0.37,0.67,Excited,0.4,0.6,0.78,112.6,,0.563,0.565,1.0,0.5549999999999999,1.0,1.0,1,Calm Harmonizer
+Shaan,Dheere Dheere,Hip-Hop,2025, Dheere Dheere...,0.68,0.85,0.72,Hope,0.37,0.29,0.79,129.9,,0.6495000000000001,0.4155,1.0,0.4195,1.0,1.0,0,Adventurous Explorer
+Mohit Chauhan,Suraj Hua Madham,Traditional,1973, Suraj Hua Madham...,0.74,0.8,0.49,Excited,0.62,0.37,0.56,122.3,,0.6114999999999999,0.55,1.0,0.5625,1.0,1.0,1,Calm Harmonizer
+Sunidhi Chauhan,Channa Mereya,Bollywood,2014, Channa Mereya...,0.26,0.67,0.32,Hope,0.5,0.93,0.48,136.6,,0.6829999999999999,0.6120000000000001,1.0,0.5905,1.0,1.0,1,Calm Harmonizer
+Alka Yagnik,Raabta,Traditional,1976, Raabta...,0.59,0.66,0.78,Sad,0.75,0.86,0.7,87.6,,0.43799999999999994,0.754,1.0,0.7484999999999999,1.0,1.0,1,Calm Harmonizer
+Darshan Raval,Kabira,Bollywood,1974, Kabira...,0.88,0.58,0.48,Hope,0.56,0.3,0.78,146.9,,0.7345,0.536,1.0,0.549,1.0,1.0,1,Calm Harmonizer
+Neha Kakkar,Suno Na,Pop,2004, Suno Na...,0.6,0.79,0.17,Happy,0.25,0.75,0.75,129.8,,0.649,0.5375000000000001,1.0,0.5125,1.0,1.0,0,Adventurous Explorer
+Jubin Nautiyal,Naino Ki Maasti,Bollywood,1977, Naino Ki Maasti...,0.74,0.46,0.61,Angry,0.45,0.35,0.47,107.6,,0.5379999999999999,0.4825,1.0,0.4875,1.0,1.0,0,Adventurous Explorer
+Kishore Kumar,Ghar More Pardesiya,Traditional,1970, Ghar More Pardesiya...,0.81,0.41,0.59,Happy,0.3,0.97,0.11,100.7,,0.5035000000000001,0.6955,1.0,0.6619999999999999,1.0,1.0,1,Calm Harmonizer
+Sonu Nigam,O Saathi,Bollywood,2025, O Saathi...,0.29,0.37,0.67,Romantic,0.53,0.75,0.78,142.6,,0.713,0.558,1.0,0.5469999999999999,1.0,1.0,1,Calm Harmonizer
+Arijit Singh,Ghungroo,Traditional,1995, Ghungroo...,0.77,0.73,0.49,Angry,0.66,0.88,0.15,86.1,,0.4305,0.7755,1.0,0.7645000000000001,1.0,1.0,1,Calm Harmonizer
+Sunidhi Chauhan,Jugnu,Hip-Hop,1974, Jugnu...,0.38,0.38,0.39,Romantic,0.83,0.77,0.32,96.2,,0.48100000000000004,0.6935,1.0,0.6964999999999999,1.0,1.0,1,Calm Harmonizer
+Shreya Ghoshal,Paagal,Traditional,1981, Paagal...,0.13,0.41,0.22,Sad,0.77,0.9,0.48,121.6,,0.608,0.6619999999999999,1.0,0.6555,1.0,1.0,1,Calm Harmonizer
+Kumar Sanu,Hook Up Song,Hip-Hop,1992, Hook Up Song...,0.83,0.84,0.64,Joy,0.66,0.59,0.36,146.5,,0.7325,0.6745,1.0,0.678,1.0,1.0,1,Calm Harmonizer
+Asha Bhosle,Muqabla,Pop,2009, Muqabla...,0.68,0.28,0.34,Hope,0.85,0.32,0.2,77.9,,0.3895,0.5955,1.0,0.622,1.0,1.0,1,Calm Harmonizer
+Jubin Nautiyal,Aankh Marey,Pop,1974, Aankh Marey...,0.38,0.43,0.77,Hope,0.54,0.73,0.75,90.9,,0.4545,0.576,1.0,0.5665,1.0,1.0,1,Calm Harmonizer
+Yo Yo Honey Singh,Tera Ban Jaunga,Hip-Hop,2013, Tera Ban Jaunga...,0.2,0.61,0.41,Hope,0.49,0.5,0.7,124.0,,0.62,0.4215,1.0,0.421,1.0,1.0,0,Adventurous Explorer
+Shaan,Shayad,Traditional,2000, Shayad...,0.44,0.61,0.13,Excited,0.49,0.84,0.4,96.4,,0.48200000000000004,0.6175,1.0,0.6,1.0,1.0,1,Calm Harmonizer
+Shalmali Kholgade,Ve Maahi,Bollywood,1980, Ve Maahi...,0.84,0.76,0.62,Hope,0.57,0.55,0.62,90.7,,0.4535,0.6295,1.0,0.6305,1.0,1.0,1,Calm Harmonizer
+Shreya Ghoshal,Vaaste,Bollywood,1981, Vaaste...,0.42,0.64,0.8,Party,0.61,0.25,0.17,80.9,,0.4045,0.4185,1.0,0.4365,0.9790000000000001,1.0,0,Adventurous Explorer
+Shaan,Tera Yaar Hoon Main,Pop,2012, Tera Yaar Hoon Main...,0.2,0.84,0.35,Romantic,0.4,0.4,0.23,76.1,,0.38049999999999995,0.35000000000000003,1.0,0.35000000000000003,1.0,1.0,0,Adventurous Explorer
+Lata Mangeshkar,Agar Tum Saath Ho,Pop,2018, Agar Tum Saath Ho...,0.37,0.88,0.52,Sad,0.87,0.82,0.32,141.6,,0.708,0.7250000000000001,1.0,0.7275,1.0,1.0,1,Calm Harmonizer
+Darshan Raval,Teri Mitti,Hip-Hop,1985, Teri Mitti...,0.32,0.45,0.17,Sad,0.51,0.3,0.24,118.1,,0.5905,0.3785,1.0,0.389,1.0,1.0,0,Adventurous Explorer
+Udit Narayan,Makhna,Traditional,1970, Makhna...,0.34,0.37,0.65,Angry,0.22,0.3,0.68,138.2,,0.691,0.28200000000000003,1.0,0.278,1.0,1.0,0,Adventurous Explorer
+Mohit Chauhan,Saki Saki,Traditional,1973, Saki Saki...,0.15,0.29,0.26,Excited,0.65,0.81,0.53,81.4,,0.40700000000000003,0.5890000000000001,1.0,0.581,1.0,1.0,1,Calm Harmonizer
+Shalmali Kholgade,O Saki Saki,Pop,1995, O Saki Saki...,0.39,0.71,0.15,Sad,0.56,0.44,0.3,139.1,,0.6955,0.46950000000000003,1.0,0.47550000000000003,1.0,1.0,0,Adventurous Explorer
+Shreya Ghoshal,Tum Se Hi,Bollywood,1977, Tum Se Hi...,0.21,0.75,0.07,Angry,0.64,0.9,0.36,136.9,,0.6845,0.6365000000000001,1.0,0.6234999999999999,1.0,1.0,1,Calm Harmonizer
+Sonu Nigam,Patakha Guddi,Pop,1983, Patakha Guddi...,0.86,0.37,0.4,Excited,0.61,0.24,0.76,94.5,,0.4725,0.5245,1.0,0.5429999999999999,1.0,1.0,1,Calm Harmonizer
+Alka Yagnik,Maahi Ve,Pop,1979, Maahi Ve...,0.9,0.77,0.28,Excited,0.4,0.88,0.62,113.0,,0.565,0.717,1.0,0.6930000000000001,1.0,1.0,1,Calm Harmonizer
+Alka Yagnik,Ramta Jogi,Hip-Hop,2021, Ramta Jogi...,0.2,0.58,0.63,Angry,0.21,0.4,0.63,99.6,,0.498,0.28350000000000003,1.0,0.27399999999999997,1.0,1.0,0,Adventurous Explorer
+Shreya Ghoshal,Lag Ja Gale,Pop,1977, Lag Ja Gale...,0.13,0.4,0.35,Happy,0.65,0.36,0.29,103.8,,0.519,0.4039999999999999,1.0,0.4185,1.0,1.0,0,Adventurous Explorer
+Yo Yo Honey Singh,Kahin Door Jab Din,Hip-Hop,2007, Kahin Door Jab Din...,0.47,0.59,0.55,Party,0.42,0.52,0.72,142.7,,0.7134999999999999,0.4725,1.0,0.46749999999999997,1.0,1.0,0,Adventurous Explorer
+Kumar Sanu,Tujhe Dekha To,Pop,1986, Tujhe Dekha To...,0.16,0.76,0.34,Excited,0.65,0.78,0.34,117.7,,0.5885,0.5795000000000001,1.0,0.573,1.0,1.0,1,Calm Harmonizer
+Shalmali Kholgade,Ye Sham Mastani,Hip-Hop,2016, Ye Sham Mastani...,0.36,0.6,0.24,Angry,0.27,0.21,0.15,74.3,,0.3715,0.26849999999999996,1.0,0.27149999999999996,1.0,1.0,0,Adventurous Explorer
+Alka Yagnik,Baharon Phool Barsao,Bollywood,1982, Baharon Phool Barsao...,0.4,0.71,0.32,Angry,0.61,0.86,0.22,73.9,,0.36950000000000005,0.6575,1.0,0.6449999999999999,1.0,1.0,1,Calm Harmonizer
+Shreya Ghoshal,Awaara Hoon,Hip-Hop,1970, Awaara Hoon...,0.31,0.23,0.34,Angry,0.43,0.56,0.61,70.8,,0.354,0.45200000000000007,1.0,0.4455,1.0,1.0,0,Adventurous Explorer
+Kumar Sanu,Chupke Chupke,Bollywood,1984, Chupke Chupke...,0.15,0.59,0.64,Hope,0.88,0.7,0.37,147.7,,0.7384999999999999,0.6255,1.0,0.6345,0.9790000000000001,1.0,1,Calm Harmonizer
+Darshan Raval,Chura Liya Hai,Pop,2012, Chura Liya Hai...,0.63,0.29,0.84,Hope,0.8,0.45,0.17,104.2,,0.521,0.6174999999999999,1.0,0.635,1.0,1.0,1,Calm Harmonizer
+Asha Bhosle,Dil Diyan Gallan,Traditional,2005, Dil Diyan Gallan...,0.87,0.57,0.76,Angry,0.53,0.51,0.33,78.0,,0.39,0.607,1.0,0.608,1.0,1.0,1,Calm Harmonizer
+Kanika Kapoor,Soch Na Sake,Pop,1982, Soch Na Sake...,0.38,0.46,0.43,Happy,0.85,0.42,0.27,94.5,,0.4725,0.5605,1.0,0.582,1.0,1.0,1,Calm Harmonizer
+Shreya Ghoshal,Baby Bring It On,Hip-Hop,1987, Baby Bring It On...,0.75,0.36,0.82,Joy,0.24,0.74,0.66,122.8,,0.614,0.5675,1.0,0.5425,1.0,1.0,1,Calm Harmonizer
+Kumar Sanu,Barso Re,Traditional,1970, Barso Re...,0.66,0.79,0.48,Excited,0.46,0.32,0.39,135.2,,0.6759999999999999,0.45400000000000007,1.0,0.4610000000000001,1.0,1.0,0,Adventurous Explorer
+Kumar Sanu,Bekhayali,Hip-Hop,2006, Bekhayali...,0.49,0.78,0.13,Romantic,0.26,0.66,0.21,107.8,,0.539,0.4775,1.0,0.45749999999999996,1.0,1.0,0,Adventurous Explorer
+Shaan,Kesariya,Pop,2000, Kesariya...,0.34,0.23,0.59,Romantic,0.77,0.6,0.41,97.5,,0.4875,0.5944999999999999,1.0,0.603,1.0,1.0,1,Calm Harmonizer
+Shaan,Jhoome Jo Pathaan,Bollywood,2025, Jhoome Jo Pathaan...,0.48,0.62,0.55,Happy,0.37,0.96,0.45,87.0,,0.435,0.6335000000000001,1.0,0.604,1.0,1.0,1,Calm Harmonizer
+Udit Narayan,Jhumka Gira Re,Hip-Hop,1973, Jhumka Gira Re...,0.82,0.26,0.41,Party,0.65,0.25,0.49,87.2,,0.436,0.5325,1.0,0.5525,1.0,0.996,1,Calm Harmonizer
+Kumar Sanu,Kutti Story,Bollywood,1980, Kutti Story...,0.86,0.5,0.51,Excited,0.82,0.29,0.26,75.1,,0.37549999999999994,0.618,1.0,0.6445,1.0,1.0,1,Calm Harmonizer
+Sonu Nigam,Kaavaalaa,Pop,1975, Kaavaalaa...,0.79,0.43,0.74,Angry,0.24,0.68,0.34,95.1,,0.4755,0.5535,1.0,0.5315,1.0,1.0,1,Calm Harmonizer
+Lata Mangeshkar,Kilimanjaro,Pop,1972, Kilimanjaro...,0.22,0.58,0.25,Romantic,0.71,0.32,0.69,78.5,,0.3925,0.43149999999999994,1.0,0.45099999999999996,1.0,1.0,0,Adventurous Explorer
+Shalmali Kholgade,Pachtoge,Traditional,2003, Pachtoge...,0.38,0.38,0.59,Hope,0.37,0.82,0.69,95.7,,0.47850000000000004,0.5525,1.0,0.5299999999999999,1.0,1.0,1,Calm Harmonizer
+Arijit Singh,Pani Da Rang,Pop,1970, Pani Da Rang...,0.33,0.36,0.72,Happy,0.37,0.55,0.14,80.7,,0.4035,0.43200000000000005,1.0,0.42300000000000004,0.9580000000000001,1.0,0,Adventurous Explorer
+Kanika Kapoor,Pathala Pathala,Traditional,1989, Pathala Pathala...,0.78,0.38,0.57,Angry,0.51,0.97,0.31,120.6,,0.603,0.7615000000000001,1.0,0.7384999999999999,1.0,1.0,1,Calm Harmonizer
+Kumar Sanu,Peniviti,Traditional,1977, Peniviti...,0.84,0.43,0.25,Party,0.82,0.69,0.18,125.8,,0.629,0.7729999999999999,1.0,0.7795,1.0,0.977,1,Calm Harmonizer
+Yo Yo Honey Singh,Saiyaara,Pop,1976, Saiyaara...,0.81,0.84,0.12,Party,0.55,0.65,0.65,89.9,,0.4495,0.655,1.0,0.65,1.0,1.0,1,Calm Harmonizer
+Kumar Sanu,Laal Pari,Hip-Hop,2019, Laal Pari...,0.83,0.88,0.66,Excited,0.47,0.28,0.15,147.2,,0.736,0.484,1.0,0.49350000000000005,1.0,1.0,0,Adventurous Explorer
+Badshah,Chor Bazari,Traditional,1981, Chor Bazari...,0.25,0.61,0.56,Excited,0.65,0.72,0.76,149.4,,0.747,0.578,1.0,0.5745,1.0,1.0,1,Calm Harmonizer
+Jubin Nautiyal,Sapphire,Hip-Hop,1994, Sapphire...,0.12,0.51,0.29,Angry,0.35,0.59,0.8,87.5,,0.4375,0.38849999999999996,1.0,0.37649999999999995,1.0,1.0,0,Adventurous Explorer
+Mohit Chauhan,Finding Her,Pop,1984, Finding Her...,0.63,0.29,0.85,Sad,0.42,0.7,0.66,121.9,,0.6095,0.5844999999999999,1.0,0.5705,1.0,1.0,1,Calm Harmonizer
+Yo Yo Honey Singh,Millionaire,Traditional,2014, Millionaire...,0.28,0.67,0.79,Happy,0.63,0.45,0.62,77.1,,0.38549999999999995,0.4705,1.0,0.4795,1.0,1.0,0,Adventurous Explorer
+Sunidhi Chauhan,Kasturi,Hip-Hop,1988, Kasturi...,0.62,0.31,0.38,Hope,0.64,0.72,0.47,87.6,,0.43799999999999994,0.667,1.0,0.663,1.0,1.0,1,Calm Harmonizer
+Shreya Ghoshal,Sapne Mai Milti Hai,Traditional,2002, Sapne Mai Milti Hai...,0.3,0.6,0.56,Hope,0.7,0.71,0.37,123.7,,0.6185,0.6039999999999999,1.0,0.6034999999999999,1.0,1.0,1,Calm Harmonizer
+Kanika Kapoor,Rangeela,Pop,2016, Rangeela...,0.69,0.72,0.64,Party,0.69,0.3,0.34,96.4,,0.48200000000000004,0.5339999999999999,1.0,0.5534999999999999,1.0,1.0,1,Calm Harmonizer
+Darshan Raval,Dil Hai Tumhaara,Hip-Hop,1972, Dil Hai Tumhaara...,0.25,0.59,0.51,Hope,0.89,0.39,0.7,112.8,,0.564,0.53,1.0,0.555,1.0,1.0,1,Calm Harmonizer
+Vishal Dadlani,Bombay,Bollywood,1974, Bombay...,0.27,0.84,0.07,Hope,0.89,0.26,0.2,76.5,,0.3825,0.483,1.0,0.5145000000000001,1.0,1.0,0,Adventurous Explorer
+Lata Mangeshkar,Devdas,Hip-Hop,1970, Devdas...,0.74,0.83,0.82,Romantic,0.58,0.85,0.29,101.4,,0.507,0.728,1.0,0.7144999999999999,1.0,1.0,1,Calm Harmonizer
+Shaan,Anari,Bollywood,2008, Anari...,0.84,0.49,0.52,Romantic,0.55,0.9,0.76,99.0,,0.495,0.7625,1.0,0.745,1.0,1.0,1,Calm Harmonizer
+Arijit Singh,Tum Hi Ho,Bollywood,2008, Tum Hi Ho...,0.84,0.67,0.74,Happy,0.51,0.49,0.5,80.6,,0.40299999999999997,0.5845,1.0,0.5855,1.0,1.0,1,Calm Harmonizer
+Mohit Chauhan,Ghoomar,Hip-Hop,2000, Ghoomar...,0.19,0.25,0.12,Romantic,0.77,0.43,0.61,142.2,,0.711,0.489,1.0,0.506,1.0,1.0,0,Adventurous Explorer
+Lata Mangeshkar,Kal Ho Naa Ho,Pop,1996, Kal Ho Naa Ho...,0.53,0.72,0.43,Excited,0.83,0.36,0.65,95.7,,0.47850000000000004,0.567,1.0,0.5905,1.0,1.0,1,Calm Harmonizer
+Shreya Ghoshal,Taal Se Taal,Bollywood,2020, Taal Se Taal...,0.63,0.61,0.69,Excited,0.36,0.97,0.6,114.1,,0.5705,0.6715,1.0,0.6409999999999999,1.0,1.0,1,Calm Harmonizer
+Darshan Raval,Pehla Nasha,Traditional,2014, Pehla Nasha...,0.77,0.43,0.76,Party,0.53,0.7,0.49,138.3,,0.6915,0.6579999999999999,1.0,0.6495,1.0,1.0,1,Calm Harmonizer
+Shaan,Breathless,Hip-Hop,1985, Breathless...,0.5,0.75,0.79,Angry,0.44,0.77,0.3,95.5,,0.4775,0.5870000000000001,1.0,0.5705,1.0,1.0,1,Calm Harmonizer
+Kanika Kapoor,Baby Doll,Hip-Hop,2002, Baby Doll...,0.77,0.84,0.05,Hope,0.8,0.64,0.66,118.7,,0.5935,0.7285,1.0,0.7365,1.0,1.0,1,Calm Harmonizer
+Neha Kakkar,DJ Wale Babu,Hip-Hop,1997, DJ Wale Babu...,0.2,0.53,0.44,Happy,0.83,0.37,0.31,91.9,,0.4595,0.4885,1.0,0.5115000000000001,1.0,1.0,0,Adventurous Explorer
+Shalmali Kholgade,Lut Gaye,Hip-Hop,2023, Lut Gaye...,0.65,0.6,0.36,Happy,0.63,0.76,0.24,105.8,,0.529,0.6869999999999999,1.0,0.6805,1.0,1.0,1,Calm Harmonizer
+Vishal Dadlani,Coca Cola,Hip-Hop,1980, Coca Cola...,0.67,0.56,0.49,Hope,0.32,0.9,0.76,122.2,,0.611,0.6395000000000001,1.0,0.6105,1.0,1.0,1,Calm Harmonizer
+Sonu Nigam,Lag Ja Gale,Hip-Hop,1982, Lag Ja Gale...,0.18,0.26,0.37,Romantic,0.39,0.57,0.17,107.9,,0.5395,0.4094999999999999,1.0,0.4005,1.0,1.0,0,Adventurous Explorer
+Sunidhi Chauhan,Chaiyya Chaiyya,Traditional,1977, Chaiyya Chaiyya...,0.42,0.46,0.48,Romantic,0.26,0.49,0.43,139.5,,0.6975,0.392,1.0,0.38049999999999995,1.0,1.0,0,Adventurous Explorer
+Kumar Sanu,Badtameez Dil,Pop,1996, Badtameez Dil...,0.25,0.72,0.59,Romantic,0.83,0.21,0.64,76.7,,0.3835,0.437,1.0,0.468,1.0,1.0,0,Adventurous Explorer
+Shankar Mahadevan,Balam Pichkari,Traditional,1988, Balam Pichkari...,0.83,0.9,0.26,Sad,0.29,0.93,0.43,111.8,,0.5589999999999999,0.681,1.0,0.649,1.0,1.0,1,Calm Harmonizer
+Sunidhi Chauhan,Genda Phool,Hip-Hop,2005, Genda Phool...,0.43,0.79,0.34,Hope,0.27,0.62,0.53,94.7,,0.47350000000000003,0.45,1.0,0.4325,1.0,1.0,0,Adventurous Explorer
+Sunidhi Chauhan,Dilbar,Hip-Hop,1996, Dilbar...,0.48,0.52,0.04,Happy,0.41,0.64,0.31,116.0,,0.58,0.5195,1.0,0.508,1.0,1.0,0,Adventurous Explorer
+Vishal Dadlani,Saudagar,Bollywood,2003, Saudagar...,0.3,0.85,0.7,Romantic,0.61,0.5,0.34,145.6,,0.728,0.4885,1.0,0.494,1.0,1.0,0,Adventurous Explorer
+Darshan Raval,Dheere Dheere,Pop,2001, Dheere Dheere...,0.78,0.85,0.12,Joy,0.5,0.82,0.43,114.2,,0.5710000000000001,0.698,1.0,0.6819999999999999,1.0,1.0,1,Calm Harmonizer
+Taylor Swift,,Pop,2015,"I stay out too late, got nothing in my brain, that's what people say, I'm dancing on my own",0.85,0.75,0.1,Happy,0.83,0.84,0.31,139.8,Shake It Off,0.6990000000000001,0.8390000000000001,1.0,0.8385,1.0,1.0,1,Calm Harmonizer
+Pharrell Williams,,Pop,2013,"Clap along if you feel like a room without a roof, because I'm happy",0.92,0.82,0.05,Happy,0.71,0.81,0.11,132.8,Happy,0.664,0.8025,1.0,0.7974999999999999,1.0,0.99,1,Calm Harmonizer
+Katrina and the Waves,,Pop,1985,I'm walking on sunshine and don't it feel good,0.9,0.8,0.08,Happy,0.76,0.7,0.17,131.1,Walking on Sunshine,0.6555,0.7709999999999999,1.0,0.774,1.0,1.0,1,Calm Harmonizer
+ABBA,,Pop,1976,"You can dance, you can jive, having the time of your life",0.88,0.78,0.12,Happy,0.74,0.65,0.19,133.7,Dancing Queen,0.6685,0.739,1.0,0.7434999999999999,1.0,1.0,1,Calm Harmonizer
+Justin Timberlake,,Pop,2016,"I got that sunshine in my pocket, got that good soul in my feet",0.87,0.85,0.09,Happy,0.85,0.89,0.12,136.9,Can't Stop the Feeling,0.6845,0.871,1.0,0.869,1.0,1.0,1,Calm Harmonizer
+Adele,,Pop,2011,"Never mind I'll find someone like you, I wish nothing but the best for you",0.15,0.3,0.75,Sad,0.4,0.3,0.59,93.3,Someone Like You,0.46649999999999997,0.2975,1.0,0.3025,1.0,1.0,0,Adventurous Explorer
+Sam Smith,,R&B,2014,"Oh won't you stay with me, cause you're all I need",0.18,0.35,0.72,Sad,0.47,0.23,0.54,76.9,Stay With Me,0.3845,0.3015,1.0,0.3135,1.0,1.0,0,Adventurous Explorer
+Billie Eilish,,Alternative,2018,"Don't you know I'm no good for you, I've learned to lose you can't afford to",0.2,0.25,0.78,Sad,0.23,0.23,0.61,71.0,When The Party's Over,0.355,0.22250000000000003,1.0,0.22250000000000003,1.0,1.0,0,Adventurous Explorer
+Coldplay,,Rock,2005,"When you try your best but you don't succeed, tears stream down your face",0.22,0.4,0.68,Sad,0.33,0.45,0.75,79.5,Fix You,0.3975,0.3505,1.0,0.3445,1.0,1.0,0,Adventurous Explorer
+Lewis Capaldi,,Pop,2018,Now the day bleeds into nightfall and you're not here to get me through it all,0.16,0.28,0.8,Sad,0.21,0.38,0.65,78.0,Someone You Loved,0.39,0.2655,1.0,0.25699999999999995,1.0,1.0,0,Adventurous Explorer
+Rage Against the Machine,,Rock,1992,Those who died are justified for wearing the badge they're the chosen whites,0.12,0.88,0.82,Angry,0.74,0.44,0.21,124.2,Killing In The Name,0.621,0.4650000000000001,1.0,0.48,0.865,1.0,2,Intense Rebel
+Linkin Park,,Rock,2000,Everything you say to me takes me one step closer to the edge and I'm about to break,0.1,0.9,0.85,Angry,0.8,0.42,0.16,138.9,One Step Closer,0.6945,0.473,1.0,0.4920000000000001,0.833,1.0,2,Intense Rebel
+Eminem,,Hip-Hop,2000,"I am whatever you say I am, if I wasn't then why would I say I am",0.15,0.85,0.78,Angry,0.71,0.36,0.18,137.5,The Way I Am,0.6875,0.42999999999999994,1.0,0.44749999999999995,0.88,1.0,2,Intense Rebel
+Nine Inch Nails,,Industrial,1990,"Bow down before the one you serve, you're going to get what you deserve",0.08,0.92,0.88,Angry,0.74,0.49,0.38,126.3,Head Like A Hole,0.6315,0.47500000000000003,1.0,0.4875,0.882,1.0,2,Intense Rebel
+Metallica,,Metal,1986,"Master of puppets I'm pulling your strings, twisting your mind and smashing your dreams",0.11,0.87,0.8,Angry,0.83,0.31,0.29,133.1,Master of Puppets,0.6655,0.442,1.0,0.468,0.891,1.0,2,Intense Rebel
+Norah Jones,,Jazz,2002,"I waited til I saw the sun, don't know why I didn't come",0.45,0.2,0.35,Relaxed,0.36,0.37,0.74,81.9,Don't Know Why,0.40950000000000003,0.3865,1.0,0.38599999999999995,1.0,1.0,0,Adventurous Explorer
+Ed Sheeran,,Pop,2014,"When your legs don't work like they used to before, I will be loving you til we're seventy",0.65,0.25,0.28,Relaxed,0.27,0.45,0.57,97.4,Thinking Out Loud,0.48700000000000004,0.43700000000000006,1.0,0.42800000000000005,1.0,0.992,0,Adventurous Explorer
+Bob Marley,,Reggae,1977,"Don't worry about a thing, cause every little thing gonna be alright",0.7,0.3,0.18,Relaxed,0.38,0.39,0.79,83.8,Three Little Birds,0.419,0.464,1.0,0.46349999999999997,1.0,0.952,0,Adventurous Explorer
+The Beatles,,Rock,1969,"Here comes the sun and I say it's alright, little darling it's been a long cold lonely winter",0.68,0.28,0.22,Relaxed,0.44,0.46,0.57,77.9,Here Comes The Sun,0.3895,0.508,1.0,0.507,1.0,0.9680000000000001,0,Adventurous Explorer
+John Mayer,,Pop,2006,"Gravity is working against me, and gravity wants to bring me down",0.4,0.22,0.48,Relaxed,0.2,0.37,0.65,77.4,Gravity,0.387,0.31799999999999995,1.0,0.3095,1.0,1.0,0,Adventurous Explorer

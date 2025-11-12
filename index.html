@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Personality Profiler</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --color-white: rgba(255, 255, 255, 1);
+            --color-black: rgba(0, 0, 0, 1);
+            --color-cream-50: rgba(252, 252, 249, 1);
+            --color-cream-100: rgba(255, 255, 253, 1);
+            --color-gray-200: rgba(245, 245, 245, 1);
+            --color-gray-300: rgba(167, 169, 169, 1);
+            --color-gray-400: rgba(119, 124, 124, 1);
+            --color-slate-500: rgba(98, 108, 113, 1);
+            --color-brown-600: rgba(94, 82, 64, 1);
+            --color-charcoal-700: rgba(31, 33, 33, 1);
+            --color-charcoal-800: rgba(38, 40, 40, 1);
+            --color-slate-900: rgba(19, 52, 59, 1);
+            --color-teal-300: rgba(50, 184, 198, 1);
+            --color-teal-400: rgba(45, 166, 178, 1);
+            --color-teal-500: rgba(33, 128, 141, 1);
+            --color-teal-600: rgba(29, 116, 128, 1);
+            --color-teal-700: rgba(26, 104, 115, 1);
+            --color-teal-800: rgba(41, 150, 161, 1);
+            --color-red-400: rgba(255, 84, 89, 1);
+            --color-red-500: rgba(192, 21, 47, 1);
+            --color-orange-400: rgba(230, 129, 97, 1);
+            --color-orange-500: rgba(168, 75, 47, 1);
+            --color-brown-600-rgb: 94, 82, 64;
+            --color-teal-500-rgb: 33, 128, 141;
+            --color-slate-900-rgb: 19, 52, 59;
+            --color-slate-500-rgb: 98, 108, 113;
+            --color-red-500-rgb: 192, 21, 47;
+            --color-red-400-rgb: 255, 84, 89;
+            --color-orange-500-rgb: 168, 75, 47;
+            --color-orange-400-rgb: 230, 129, 97;
+            --color-bg-1: rgba(59, 130, 246, 0.08);
+            --color-bg-2: rgba(245, 158, 11, 0.08);
+            --color-bg-3: rgba(34, 197, 94, 0.08);
+            --color-bg-4: rgba(239, 68, 68, 0.08);
+            --color-bg-5: rgba(147, 51, 234, 0.08);
+            --color-bg-6: rgba(249, 115, 22, 0.08);
+            --color-bg-7: rgba(236, 72, 153, 0.08);
+            --color-bg-8: rgba(6, 182, 212, 0.08);
+            --color-background: var(--color-cream-50);
+            --color-surface: var(--color-cream-100);
+            --color-text: var(--color-slate-900);
+            --color-text-secondary: var(--color-slate-500);
+            --color-primary: var(--color-teal-500);
+            --color-primary-hover: var(--color-teal-600);
+            --color-primary-active: var(--color-teal-700);
+            --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+            --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+            --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+            --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+            --color-btn-primary-text: var(--color-cream-50);
+            --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+            --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+            --color-error: var(--color-red-500);
+            --color-success: var(--color-teal-500);
+            --color-warning: var(--color-orange-500);
+            --color-info: var(--color-slate-500);
+            --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+            --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+            --focus-ring: 0 0 0 3px var(--color-focus-ring);
+            --focus-outline: 2px solid var(--color-primary);
+            --status-bg-opacity: 0.15;
+            --status-border-opacity: 0.25;
+            --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            --color-success-rgb: 33, 128, 141;
+            --color-error-rgb: 192, 21, 47;
+            --color-warning-rgb: 168, 75, 47;
+            --color-info-rgb: 98, 108, 113;
+            --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-family-mono: "Berkeley Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            --font-size-xs: 11px;
+            --font-size-sm: 12px;
+            --font-size-base: 14px;
+            --font-size-md: 14px;
+            --font-size-lg: 16px;
+            --font-size-xl: 18px;
+            --font-size-2xl: 20px;
+            --font-size-3xl: 24px;
+            --font-size-4xl: 30px;
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 550;
+            --font-weight-bold: 600;
+            --line-height-tight: 1.2;
+            --line-height-normal: 1.5;
+            --letter-spacing-tight: -0.01em;
+            --space-0: 0;
+            --space-1: 1px;
+            --space-2: 2px;
+            --space-4: 4px;
+            --space-6: 6px;
+            --space-8: 8px;
+            --space-10: 10px;
+            --space-12: 12px;
+            --space-16: 16px;
+            --space-20: 20px;
+            --space-24: 24px;
+            --space-32: 32px;
+            --radius-sm: 6px;
+            --radius-base: 8px;
+            --radius-md: 10px;
+            --radius-lg: 12px;
+            --radius-full: 9999px;
+            --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+            --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+            --duration-fast: 150ms;
+            --duration-normal: 250ms;
+            --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+            --container-sm: 640px;
+            --container-md: 768px;
+            --container-lg: 1024px;
+            --container-xl: 1280px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-gray-400-rgb: 119, 124, 124;
+                --color-teal-300-rgb: 50, 184, 198;
+                --color-gray-300-rgb: 167, 169, 169;
+                --color-gray-200-rgb: 245, 245, 245;
+                --color-bg-1: rgba(29, 78, 216, 0.15);
+                --color-bg-2: rgba(180, 83, 9, 0.15);
+                --color-bg-3: rgba(21, 128, 61, 0.15);
+                --color-bg-4: rgba(185, 28, 28, 0.15);
+                --color-bg-5: rgba(107, 33, 168, 0.15);
+                --color-bg-6: rgba(194, 65, 12, 0.15);
+                --color-bg-7: rgba(190, 24, 93, 0.15);
+                --color-bg-8: rgba(8, 145, 178, 0.15);
+                --color-background: var(--color-charcoal-700);
+                --color-surface: var(--color-charcoal-800);
+                --color-text: var(--color-gray-200);
+                --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+                --color-primary: var(--color-teal-300);
+                --color-primary-hover: var(--color-teal-400);
+                --color-primary-active: var(--color-teal-800);
+                --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+                --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+                --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+                --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+                --color-error: var(--color-red-400);
+                --color-success: var(--color-teal-300);
+                --color-warning: var(--color-orange-400);
+                --color-info: var(--color-gray-300);
+                --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+                --color-btn-primary-text: var(--color-slate-900);
+                --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+                --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+                --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+                --button-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+                --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+                --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+                --color-success-rgb: var(--color-teal-300-rgb);
+                --color-error-rgb: var(--color-red-400-rgb);
+                --color-warning-rgb: var(--color-orange-400-rgb);
+                --color-info-rgb: var(--color-gray-300-rgb);
+            }
+        }
+
+        @font-face {
+            font-family: 'FKGroteskNeue';
+            src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2') format('woff2');
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family-base);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: var(--space-24);
+            color: var(--color-text);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-32);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-24);
+        }
+
+        @media (max-width: 1024px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .panel {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-24);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .panel h2 {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--space-20);
+            color: var(--color-slate-900);
+        }
+
+        .mode-toggle {
+            display: flex;
+            gap: var(--space-8);
+            margin-bottom: var(--space-20);
+        }
+
+        .mode-btn {
+            flex: 1;
+            padding: var(--space-10) var(--space-16);
+            background: var(--color-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-base);
+            cursor: pointer;
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-medium);
+            color: var(--color-text);
+            transition: all var(--duration-fast) var(--ease-standard);
+        }
+
+        .mode-btn.active {
+            background: var(--color-primary);
+            color: white;
+            border-color: var(--color-primary);
+        }
+
+        .mode-btn:hover {
+            background: var(--color-secondary-hover);
+        }
+
+        .mode-btn.active:hover {
+            background: var(--color-primary-hover);
+        }
+
+        .input-mode {
+            display: none;
+        }
+
+        .input-mode.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: var(--space-16);
+        }
+
+        label {
+            display: block;
+            margin-bottom: var(--space-6);
+            font-weight: var(--font-weight-medium);
+            font-size: var(--font-size-sm);
+            color: var(--color-slate-900);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: var(--space-10) var(--space-12);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-base);
+            font-size: var(--font-size-base);
+            font-family: var(--font-family-base);
+            transition: border-color var(--duration-fast) var(--ease-standard);
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: var(--focus-ring);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 200px;
+            font-family: var(--font-family-mono);
+            font-size: var(--font-size-sm);
+        }
+
+        .song-item {
+            background: var(--color-bg-1);
+            padding: var(--space-16);
+            border-radius: var(--radius-base);
+            margin-bottom: var(--space-16);
+            border: 1px solid var(--color-border);
+        }
+
+        .song-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-12);
+        }
+
+        .song-number {
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-primary);
+        }
+
+        .remove-btn {
+            background: var(--color-error);
+            color: white;
+            border: none;
+            padding: var(--space-4) var(--space-12);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+            transition: opacity var(--duration-fast) var(--ease-standard);
+        }
+
+        .remove-btn:hover {
+            opacity: 0.8;
+        }
+
+        .song-basic {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-12);
+            margin-bottom: var(--space-12);
+        }
+
+        .song-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: var(--space-8);
+        }
+
+        .feature-input {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-input label {
+            font-size: var(--font-size-xs);
+            margin-bottom: var(--space-4);
+        }
+
+        .feature-input input {
+            padding: var(--space-6) var(--space-8);
+            font-size: var(--font-size-sm);
+        }
+
+        .add-song-btn {
+            width: 100%;
+            padding: var(--space-12);
+            background: var(--color-secondary);
+            border: 1px dashed var(--color-border);
+            border-radius: var(--radius-base);
+            cursor: pointer;
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-medium);
+            color: var(--color-text);
+            transition: all var(--duration-fast) var(--ease-standard);
+            margin-bottom: var(--space-16);
+        }
+
+        .add-song-btn:hover {
+            background: var(--color-secondary-hover);
+            border-color: var(--color-primary);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: var(--space-12);
+        }
+
+        .btn {
+            flex: 1;
+            padding: var(--space-12) var(--space-20);
+            border: none;
+            border-radius: var(--radius-base);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-semibold);
+            cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-standard);
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-secondary {
+            background: var(--color-secondary);
+            color: var(--color-text);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-secondary-hover);
+        }
+
+        .results-panel {
+            display: none;
+        }
+
+        .results-panel.active {
+            display: block;
+        }
+
+        .archetype-box {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-active));
+            color: white;
+            padding: var(--space-24);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            margin-bottom: var(--space-24);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .archetype-emoji {
+            font-size: 48px;
+            margin-bottom: var(--space-12);
+        }
+
+        .archetype-name {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+        }
+
+        .chart-container {
+            background: var(--color-bg-2);
+            padding: var(--space-20);
+            border-radius: var(--radius-base);
+            margin-bottom: var(--space-24);
+            border: 1px solid var(--color-border);
+            height: 400px;
+        }
+
+        .chart-container canvas {
+            max-height: 100%;
+        }
+
+        .traits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-16);
+            margin-bottom: var(--space-24);
+        }
+
+        .trait-card {
+            padding: var(--space-16);
+            border-radius: var(--radius-base);
+            border: 1px solid var(--color-border);
+        }
+
+        .trait-card.openness {
+            background: rgba(255, 107, 107, 0.1);
+            border-color: #FF6B6B;
+        }
+
+        .trait-card.conscientiousness {
+            background: rgba(78, 205, 196, 0.1);
+            border-color: #4ECDC4;
+        }
+
+        .trait-card.extraversion {
+            background: rgba(69, 183, 209, 0.1);
+            border-color: #45B7D1;
+        }
+
+        .trait-card.agreeableness {
+            background: rgba(255, 160, 122, 0.1);
+            border-color: #FFA07A;
+        }
+
+        .trait-card.neuroticism {
+            background: rgba(149, 225, 211, 0.1);
+            border-color: #95E1D3;
+        }
+
+        .trait-name {
+            font-weight: var(--font-weight-semibold);
+            font-size: var(--font-size-base);
+            margin-bottom: var(--space-8);
+            color: var(--color-slate-900);
+        }
+
+        .trait-score {
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-8);
+            color: var(--color-slate-900);
+        }
+
+        .trait-progress {
+            width: 100%;
+            height: 8px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+            margin-bottom: var(--space-8);
+        }
+
+        .trait-progress-bar {
+            height: 100%;
+            transition: width var(--duration-normal) var(--ease-standard);
+        }
+
+        .trait-card.openness .trait-progress-bar {
+            background: #FF6B6B;
+        }
+
+        .trait-card.conscientiousness .trait-progress-bar {
+            background: #4ECDC4;
+        }
+
+        .trait-card.extraversion .trait-progress-bar {
+            background: #45B7D1;
+        }
+
+        .trait-card.agreeableness .trait-progress-bar {
+            background: #FFA07A;
+        }
+
+        .trait-card.neuroticism .trait-progress-bar {
+            background: #95E1D3;
+        }
+
+        .trait-level {
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+            color: var(--color-text-secondary);
+        }
+
+        .songs-list {
+            background: var(--color-bg-3);
+            padding: var(--space-20);
+            border-radius: var(--radius-base);
+            border: 1px solid var(--color-border);
+        }
+
+        .songs-list h3 {
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--space-12);
+            color: var(--color-slate-900);
+        }
+
+        .song-list-item {
+            padding: var(--space-8);
+            margin-bottom: var(--space-6);
+            background: white;
+            border-radius: var(--radius-sm);
+            font-size: var(--font-size-sm);
+        }
+
+        .song-list-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .artist {
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-slate-900);
+        }
+
+        .title {
+            color: var(--color-text-secondary);
+            margin-left: var(--space-4);
+        }
+
+        .message {
+            padding: var(--space-12) var(--space-16);
+            border-radius: var(--radius-base);
+            margin-bottom: var(--space-16);
+            font-size: var(--font-size-sm);
+        }
+
+        .message.error {
+            background: rgba(var(--color-error-rgb), 0.1);
+            color: var(--color-error);
+            border: 1px solid var(--color-error);
+        }
+
+        .message.success {
+            background: rgba(var(--color-success-rgb), 0.1);
+            color: var(--color-success);
+            border: 1px solid var(--color-success);
+        }
+
+        .loading {
+            text-align: center;
+            padding: var(--space-32);
+        }
+
+        .spinner {
+            border: 4px solid var(--color-secondary);
+            border-top: 4px solid var(--color-primary);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto var(--space-16) auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .json-hint {
+            background: var(--color-bg-4);
+            padding: var(--space-12);
+            border-radius: var(--radius-sm);
+            font-size: var(--font-size-xs);
+            margin-bottom: var(--space-12);
+            border: 1px solid var(--color-border);
+            color: var(--color-slate-900);
+        }
+
+        .json-hint code {
+            font-family: var(--font-family-mono);
+            font-size: var(--font-size-xs);
+            background: rgba(0, 0, 0, 0.05);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-sm);
+        }
+
+        .url-examples {
+            background: var(--color-bg-5);
+            padding: var(--space-12);
+            border-radius: var(--radius-sm);
+            margin-top: var(--space-8);
+            border: 1px solid var(--color-border);
+        }
+
+        .url-examples code {
+            font-family: var(--font-family-mono);
+            font-size: var(--font-size-xs);
+            background: rgba(0, 0, 0, 0.05);
+            padding: var(--space-2) var(--space-6);
+            border-radius: var(--radius-sm);
+            color: var(--color-slate-900);
+        }
+
+        .spotify-help {
+            background: linear-gradient(135deg, #1DB954 0%, #1ed760 100%);
+            color: white;
+            padding: var(--space-12);
+            border-radius: var(--radius-base);
+            margin-bottom: var(--space-16);
+            font-size: var(--font-size-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--space-8);
+        }
+
+        .spotify-help a {
+            color: white;
+            text-decoration: underline;
+            font-weight: var(--font-weight-medium);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-active));
+        }
+
+        .loading-progress {
+            margin-top: var(--space-16);
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-sm);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .url-examples code {
+                background: rgba(255, 255, 255, 0.1);
+                color: var(--color-gray-200);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎵 Spotify Music Personality Profiler</h1>
+        
+        <div class="layout">
+            <!-- Input Panel -->
+            <div class="panel">
+                <h2>Analyze Your Music</h2>
+                <p style="color: var(--color-text-secondary); font-size: var(--font-size-sm); margin-bottom: var(--space-20);">Discover your musical personality by analyzing your Spotify playlists or manually adding songs.</p>
+                
+                <div class="mode-toggle">
+                    <button class="mode-btn active" onclick="switchMode('spotify')">Spotify Playlist URL</button>
+                    <button class="mode-btn" onclick="switchMode('form')">Manual Songs</button>
+                    <button class="mode-btn" onclick="switchMode('json')">JSON Import</button>
+                </div>
+
+                <div id="messageBox"></div>
+
+                <!-- Spotify Mode -->
+                <div id="spotifyMode" class="input-mode active">
+                    <div class="spotify-help">
+                        <span>🎵</span>
+                        <span>Demo Mode: Enter any Spotify playlist URL to see personality analysis. Real API credentials are optional.</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Spotify Client ID (Optional for Demo)</label>
+                        <input type="text" id="spotifyClientId" placeholder="Your Spotify Client ID">
+                        <small style="color: var(--color-text-secondary); font-size: var(--font-size-xs); display: block; margin-top: var(--space-4);">Get credentials from <a href="https://developer.spotify.com/dashboard" target="_blank" style="color: var(--color-primary);">Spotify Developer Dashboard</a></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Spotify Client Secret (Optional for Demo)</label>
+                        <input type="password" id="spotifyClientSecret" placeholder="Your Spotify Client Secret">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Spotify Playlist URL</label>
+                        <input type="text" id="spotifyUrl" placeholder="https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M">
+                        <div class="url-examples">
+                            <small style="color: var(--color-text-secondary); font-size: var(--font-size-xs); display: block; margin-top: var(--space-8);">Supported formats:</small>
+                            <code style="display: block; font-size: var(--font-size-xs); margin-top: var(--space-4); color: var(--color-text-secondary);">https://open.spotify.com/playlist/ID</code>
+                            <code style="display: block; font-size: var(--font-size-xs); margin-top: var(--space-2); color: var(--color-text-secondary);">spotify:playlist:ID</code>
+                            <code style="display: block; font-size: var(--font-size-xs); margin-top: var(--space-2); color: var(--color-text-secondary);">ID only</code>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="analyzeSpotifyPlaylist()">🎵 Analyze Playlist</button>
+                        <button class="btn btn-secondary" onclick="clearAll()">Clear All</button>
+                    </div>
+                </div>
+
+                <!-- Form Mode -->
+                <div id="formMode" class="input-mode">
+                    <div class="form-group">
+                        <label>Playlist Name</label>
+                        <input type="text" id="playlistName" placeholder="My Awesome Playlist" value="My Music Taste">
+                    </div>
+
+                    <div id="songsContainer">
+                        <!-- Songs will be added here -->
+                    </div>
+
+                    <button class="add-song-btn" onclick="addSong()">+ Add Song</button>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="analyzePersonality()">Analyze Personality</button>
+                        <button class="btn btn-secondary" onclick="clearAll()">Clear All</button>
+                    </div>
+                </div>
+
+                <!-- JSON Mode -->
+                <div id="jsonMode" class="input-mode">
+                    <div class="form-group">
+                        <label>Playlist Name</label>
+                        <input type="text" id="playlistNameJson" placeholder="My Awesome Playlist" value="My Music Taste">
+                    </div>
+
+                    <div class="form-group">
+                        <label>JSON Data</label>
+                        <div class="json-hint">
+                            Paste a JSON array of songs. Each song should have: <code>artist</code>, <code>title</code>, <code>valence</code>, <code>arousal</code>, <code>negativity</code>, <code>energy</code>, <code>danceability</code>, <code>acousticness</code>, <code>tempo</code>
+                        </div>
+                        <textarea id="jsonInput" placeholder='[{"artist": "Taylor Swift", "title": "Shake It Off", "valence": 0.85, ...}]'></textarea>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="analyzeFromJSON()">Analyze Personality</button>
+                        <button class="btn btn-secondary" onclick="clearAll()">Clear All</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Panel -->
+            <div class="panel results-panel" id="resultsPanel">
+                <div id="loadingIndicator" class="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Analyzing your musical personality...</p>
+                    <div class="loading-progress">
+                        <p id="loadingStep">Fetching playlist data...</p>
+                    </div>
+                </div>
+
+                <div id="resultsContent" style="display: none;">
+                    <h2>Personality Profile</h2>
+                    
+                    <div class="archetype-box">
+                        <div class="archetype-emoji" id="archetypeEmoji">🎨</div>
+                        <div class="archetype-name" id="archetypeName">Creative Dreamer</div>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="personalityChart"></canvas>
+                    </div>
+
+                    <div class="traits-grid" id="traitsGrid">
+                        <!-- Trait cards will be inserted here -->
+                    </div>
+
+                    <div class="songs-list">
+                        <h3>Analyzed Songs</h3>
+                        <div id="songsList">
+                            <!-- Song list items will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // State management
+        let songs = [];
+        let currentMode = 'spotify';
+        let personalityChart = null;
+
+        // Sample Spotify playlists data
+        const samplePlaylists = {
+            '37i9dQZF1DXcBWIGoYBM5M': {
+                name: "Today's Top Hits",
+                tracks: [
+                    { name: "Anti-Hero", artist: "Taylor Swift", valence: 0.68, energy: 0.65, danceability: 0.58, acousticness: 0.32, tempo: 96 },
+                    { name: "Flowers", artist: "Miley Cyrus", valence: 0.71, energy: 0.70, danceability: 0.67, acousticness: 0.12, tempo: 95 },
+                    { name: "Kill Bill", artist: "SZA", valence: 0.35, energy: 0.46, danceability: 0.58, acousticness: 0.25, tempo: 134 }
+                ]
+            },
+            '37i9dQZF1DX4WYpdgoIcn6': {
+                name: "Chill Vibes",
+                tracks: [
+                    { name: "Weightless", artist: "Marconi Union", valence: 0.45, energy: 0.15, danceability: 0.35, acousticness: 0.92, tempo: 60 },
+                    { name: "The Scientist", artist: "Coldplay", valence: 0.28, energy: 0.38, danceability: 0.41, acousticness: 0.73, tempo: 146 }
+                ]
+            }
+        };
+
+        // Sample data
+        const sampleSongs = [
+            {
+                artist: "Taylor Swift",
+                title: "Shake It Off",
+                valence: 0.85,
+                arousal: 0.75,
+                negativity: 0.1,
+                energy: 0.83,
+                danceability: 0.84,
+                acousticness: 0.31,
+                tempo: 139.8
+            },
+            {
+                artist: "Pharrell Williams",
+                title: "Happy",
+                valence: 0.92,
+                arousal: 0.82,
+                negativity: 0.05,
+                energy: 0.71,
+                danceability: 0.81,
+                acousticness: 0.11,
+                tempo: 132.8
+            },
+            {
+                artist: "Bob Marley",
+                title: "Three Little Birds",
+                valence: 0.7,
+                arousal: 0.3,
+                negativity: 0.18,
+                energy: 0.38,
+                danceability: 0.39,
+                acousticness: 0.79,
+                tempo: 83.8
+            }
+        ];
+
+        const archetypes = [
+            { trait: 'Openness', name: 'Adventurous Explorer', emoji: '🚀' },
+            { trait: 'Conscientiousness', name: 'Calm Harmonizer', emoji: '🕊️' },
+            { trait: 'Extraversion', name: 'Intense Rebel', emoji: '⚡' },
+            { trait: 'Agreeableness', name: 'Creative Dreamer', emoji: '🎨' },
+            { trait: 'Neuroticism', name: 'Deep Thinker', emoji: '🌙' }
+        ];
+
+        const traitColors = {
+            Openness: '#FF6B6B',
+            Conscientiousness: '#4ECDC4',
+            Extraversion: '#45B7D1',
+            Agreeableness: '#FFA07A',
+            Neuroticism: '#95E1D3'
+        };
+
+        // Initialize with sample songs
+        function init() {
+            sampleSongs.forEach(song => {
+                addSong(song);
+            });
+        }
+
+        // Switch between modes
+        function switchMode(mode) {
+            currentMode = mode;
+            document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.input-mode').forEach(m => m.classList.remove('active'));
+            
+            if (mode === 'spotify') {
+                document.querySelectorAll('.mode-btn')[0].classList.add('active');
+                document.getElementById('spotifyMode').classList.add('active');
+            } else if (mode === 'form') {
+                document.querySelectorAll('.mode-btn')[1].classList.add('active');
+                document.getElementById('formMode').classList.add('active');
+            } else {
+                document.querySelectorAll('.mode-btn')[2].classList.add('active');
+                document.getElementById('jsonMode').classList.add('active');
+            }
+        }
+
+        // Add a new song input
+        function addSong(songData = null) {
+            const container = document.getElementById('songsContainer');
+            const songIndex = songs.length;
+            
+            const songDiv = document.createElement('div');
+            songDiv.className = 'song-item';
+            songDiv.dataset.index = songIndex;
+            
+            const song = songData || {
+                artist: '',
+                title: '',
+                valence: 0.5,
+                arousal: 0.5,
+                negativity: 0.5,
+                energy: 0.5,
+                danceability: 0.5,
+                acousticness: 0.5,
+                tempo: 120
+            };
+            
+            songs.push(song);
+            
+            songDiv.innerHTML = `
+                <div class="song-header">
+                    <span class="song-number">Song ${songIndex + 1}</span>
+                    <button class="remove-btn" onclick="removeSong(${songIndex})">Remove</button>
+                </div>
+                <div class="song-basic">
+                    <div class="form-group">
+                        <label>Artist</label>
+                        <input type="text" value="${song.artist}" onchange="updateSong(${songIndex}, 'artist', this.value)" placeholder="Artist Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" value="${song.title}" onchange="updateSong(${songIndex}, 'title', this.value)" placeholder="Song Title">
+                    </div>
+                </div>
+                <div class="song-features">
+                    <div class="feature-input">
+                        <label>Valence</label>
+                        <input type="number" step="0.01" min="0" max="1" value="${song.valence}" onchange="updateSong(${songIndex}, 'valence', parseFloat(this.value))">
+                    </div>
+                    <div class="feature-input">
+                        <label>Arousal</label>
+                        <input type="number" step="0.01" min="0" max="1" value="${song.arousal}" onchange="updateSong(${songIndex}, 'arousal', parseFloat(this.value))">
+                    </div>
+                    <div class="feature-input">
+                        <label>Negativity</label>
+                        <input type="number" step="0.01" min="0" max="1" value="${song.negativity}" onchange="updateSong(${songIndex}, 'negativity', parseFloat(this.value))">
+                    </div>
+                    <div class="feature-input">
+                        <label>Energy</label>
+                        <input type="number" step="0.01" min="0" max="1" value="${song.energy}" onchange="updateSong(${songIndex}, 'energy', parseFloat(this.value))">
+                    </div>
+                    <div class="feature-input">
+                        <label>Danceability</label>
+                        <input type="number" step="0.01" min="0" max="1" value="${song.danceability}" onchange="updateSong(${songIndex}, 'danceability', parseFloat(this.value))">
+                    </div>
+                    <div class="feature-input">
+                        <label>Acousticness</label>
+                        <input type="number" step="0.01" min="0" max="1" value="${song.acousticness}" onchange="updateSong(${songIndex}, 'acousticness', parseFloat(this.value))">
+                    </div>
+                    <div class="feature-input">
+                        <label>Tempo</label>
+                        <input type="number" step="0.1" min="0" max="250" value="${song.tempo}" onchange="updateSong(${songIndex}, 'tempo', parseFloat(this.value))">
+                    </div>
+                </div>
+            `;
+            
+            container.appendChild(songDiv);
+        }
+
+        // Update song data
+        function updateSong(index, field, value) {
+            if (songs[index]) {
+                songs[index][field] = value;
+            }
+        }
+
+        // Remove a song
+        function removeSong(index) {
+            songs.splice(index, 1);
+            renderSongs();
+        }
+
+        // Re-render all songs
+        function renderSongs() {
+            const container = document.getElementById('songsContainer');
+            container.innerHTML = '';
+            const tempSongs = [...songs];
+            songs = [];
+            tempSongs.forEach(song => addSong(song));
+        }
+
+        // Clear all data
+        function clearAll() {
+            songs = [];
+            document.getElementById('songsContainer').innerHTML = '';
+            document.getElementById('playlistName').value = 'My Music Taste';
+            document.getElementById('playlistNameJson').value = 'My Music Taste';
+            document.getElementById('jsonInput').value = '';
+            document.getElementById('spotifyUrl').value = '';
+            document.getElementById('spotifyClientId').value = '';
+            document.getElementById('spotifyClientSecret').value = '';
+            hideMessage();
+            document.getElementById('resultsPanel').classList.remove('active');
+        }
+
+        // Show message
+        function showMessage(text, type = 'error') {
+            const messageBox = document.getElementById('messageBox');
+            messageBox.innerHTML = `<div class="message ${type}">${text}</div>`;
+        }
+
+        // Hide message
+        function hideMessage() {
+            document.getElementById('messageBox').innerHTML = '';
+        }
+
+        // Calculate personality from songs
+        function calculatePersonality(songsList) {
+            if (!songsList || songsList.length === 0) {
+                return null;
+            }
+
+            const traits = {
+                Openness: 0,
+                Conscientiousness: 0,
+                Extraversion: 0,
+                Agreeableness: 0,
+                Neuroticism: 0
+            };
+
+            songsList.forEach(song => {
+                // Openness = (danceability × 0.4) + (energy × 0.35) + (valence × 0.25)
+                traits.Openness += (song.danceability * 0.4) + (song.energy * 0.35) + (song.valence * 0.25);
+                
+                // Conscientiousness = (acousticness × 0.5) + (|1-tempo/200| × 0.3) + ((1-energy) × 0.2)
+                traits.Conscientiousness += (song.acousticness * 0.5) + (Math.abs(1 - song.tempo / 200) * 0.3) + ((1 - song.energy) * 0.2);
+                
+                // Extraversion = (energy × 0.4) + (danceability × 0.35) + (valence × 0.25)
+                traits.Extraversion += (song.energy * 0.4) + (song.danceability * 0.35) + (song.valence * 0.25);
+                
+                // Agreeableness = (valence × 0.4) + (acousticness × 0.3) + ((1-negativity) × 0.3)
+                traits.Agreeableness += (song.valence * 0.4) + (song.acousticness * 0.3) + ((1 - song.negativity) * 0.3);
+                
+                // Neuroticism = (negativity × 0.4) + (arousal × 0.3) + ((1-valence) × 0.3)
+                traits.Neuroticism += (song.negativity * 0.4) + (song.arousal * 0.3) + ((1 - song.valence) * 0.3);
+            });
+
+            // Average the traits
+            Object.keys(traits).forEach(trait => {
+                traits[trait] = traits[trait] / songsList.length;
+            });
+
+            return traits;
+        }
+
+        // Get archetype from personality
+        function getArchetype(traits) {
+            let maxTrait = null;
+            let maxValue = -1;
+
+            Object.keys(traits).forEach(trait => {
+                if (traits[trait] > maxValue) {
+                    maxValue = traits[trait];
+                    maxTrait = trait;
+                }
+            });
+
+            const archetype = archetypes.find(a => a.trait === maxTrait);
+            return archetype || archetypes[3];
+        }
+
+        // Get trait level
+        function getTraitLevel(score) {
+            if (score < 0.3) return 'Low';
+            if (score < 0.7) return 'Medium';
+            return 'High';
+        }
+
+        // Analyze personality from form
+        function analyzePersonality() {
+            hideMessage();
+
+            if (songs.length === 0) {
+                showMessage('Please add at least one song to analyze.', 'error');
+                return;
+            }
+
+            // Validate all songs have required data
+            for (let i = 0; i < songs.length; i++) {
+                const song = songs[i];
+                if (!song.artist || !song.title) {
+                    showMessage(`Song ${i + 1} is missing artist or title.`, 'error');
+                    return;
+                }
+            }
+
+            performAnalysis(songs);
+        }
+
+        // Analyze from JSON
+        function analyzeFromJSON() {
+            hideMessage();
+
+            const jsonInput = document.getElementById('jsonInput').value.trim();
+            if (!jsonInput) {
+                showMessage('Please enter JSON data.', 'error');
+                return;
+            }
+
+            try {
+                const jsonSongs = JSON.parse(jsonInput);
+                if (!Array.isArray(jsonSongs) || jsonSongs.length === 0) {
+                    showMessage('JSON must be an array of songs.', 'error');
+                    return;
+                }
+
+                // Validate songs
+                const requiredFields = ['artist', 'title', 'valence', 'arousal', 'negativity', 'energy', 'danceability', 'acousticness', 'tempo'];
+                for (let i = 0; i < jsonSongs.length; i++) {
+                    const song = jsonSongs[i];
+                    for (let field of requiredFields) {
+                        if (song[field] === undefined) {
+                            showMessage(`Song ${i + 1} is missing field: ${field}`, 'error');
+                            return;
+                        }
+                    }
+                }
+
+                performAnalysis(jsonSongs);
+            } catch (e) {
+                showMessage('Invalid JSON format. Please check your data.', 'error');
+            }
+        }
+
+        // Perform the analysis
+        function performAnalysis(songsList) {
+            // Show loading
+            document.getElementById('resultsPanel').classList.add('active');
+            document.getElementById('loadingIndicator').style.display = 'block';
+            document.getElementById('resultsContent').style.display = 'none';
+
+            // Simulate analysis delay
+            setTimeout(() => {
+                const traits = calculatePersonality(songsList);
+                const archetype = getArchetype(traits);
+
+                // Update archetype
+                document.getElementById('archetypeEmoji').textContent = archetype.emoji;
+                document.getElementById('archetypeName').textContent = archetype.name;
+
+                // Update radar chart
+                updateRadarChart(traits);
+
+                // Update trait cards
+                updateTraitCards(traits);
+
+                // Update songs list
+                updateSongsList(songsList);
+
+                // Hide loading, show results
+                document.getElementById('loadingIndicator').style.display = 'none';
+                document.getElementById('resultsContent').style.display = 'block';
+
+                showMessage('Analysis complete!', 'success');
+            }, 1500);
+        }
+
+        // Update radar chart
+        function updateRadarChart(traits) {
+            const ctx = document.getElementById('personalityChart').getContext('2d');
+
+            if (personalityChart) {
+                personalityChart.destroy();
+            }
+
+            const traitNames = Object.keys(traits);
+            const traitValues = Object.values(traits).map(v => (v * 100).toFixed(1));
+
+            personalityChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: traitNames,
+                    datasets: [{
+                        label: 'Personality Profile',
+                        data: traitValues,
+                        backgroundColor: 'rgba(33, 128, 141, 0.2)',
+                        borderColor: 'rgba(33, 128, 141, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(33, 128, 141, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(33, 128, 141, 1)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                stepSize: 20
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        }
+
+        // Update trait cards
+        function updateTraitCards(traits) {
+            const container = document.getElementById('traitsGrid');
+            container.innerHTML = '';
+
+            Object.keys(traits).forEach(trait => {
+                const score = traits[trait];
+                const percentage = (score * 100).toFixed(0);
+                const level = getTraitLevel(score);
+                const className = trait.toLowerCase();
+
+                const card = document.createElement('div');
+                card.className = `trait-card ${className}`;
+                card.innerHTML = `
+                    <div class="trait-name">${trait}</div>
+                    <div class="trait-score">${percentage}%</div>
+                    <div class="trait-progress">
+                        <div class="trait-progress-bar" style="width: ${percentage}%"></div>
+                    </div>
+                    <div class="trait-level">${level}</div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Update songs list
+        function updateSongsList(songsList) {
+            const container = document.getElementById('songsList');
+            container.innerHTML = '';
+
+            songsList.forEach(song => {
+                const item = document.createElement('div');
+                item.className = 'song-list-item';
+                item.innerHTML = `
+                    <span class="artist">${song.artist}</span>
+                    <span class="title">- ${song.title}</span>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Extract playlist ID from various URL formats
+        function extractPlaylistId(input) {
+            if (!input) return null;
+            
+            input = input.trim();
+            
+            // Pattern 1: https://open.spotify.com/playlist/ID or https://open.spotify.com/playlist/ID?si=...
+            let match = input.match(/open\.spotify\.com\/playlist\/([a-zA-Z0-9]+)/);
+            if (match) return match[1];
+            
+            // Pattern 2: spotify:playlist:ID
+            match = input.match(/spotify:playlist:([a-zA-Z0-9]+)/);
+            if (match) return match[1];
+            
+            // Pattern 3: Just the ID (alphanumeric string)
+            if (/^[a-zA-Z0-9]+$/.test(input)) {
+                return input;
+            }
+            
+            return null;
+        }
+
+        // Calculate derived features from Spotify audio features
+        function calculateDerivedFeatures(track) {
+            // Normalize tempo (0-250 BPM range)
+            const normalizedTempo = Math.min(track.tempo / 250, 1);
+            
+            // Simulate loudness (typically -60 to 0 dB, we'll estimate from energy)
+            const normalizedLoudness = track.energy * 0.8;
+            
+            // arousal = (energy × 0.7) + (normalized_loudness × 0.3)
+            const arousal = (track.energy * 0.7) + (normalizedLoudness * 0.3);
+            
+            // negativity = 1 - valence
+            const negativity = 1 - track.valence;
+            
+            return {
+                ...track,
+                arousal: arousal,
+                negativity: negativity,
+                title: track.name,
+                artist: track.artist
+            };
+        }
+
+        // Analyze Spotify playlist
+        function analyzeSpotifyPlaylist() {
+            hideMessage();
+            
+            const urlInput = document.getElementById('spotifyUrl').value.trim();
+            
+            if (!urlInput) {
+                showMessage('Please enter a Spotify playlist URL.', 'error');
+                return;
+            }
+            
+            const playlistId = extractPlaylistId(urlInput);
+            
+            if (!playlistId) {
+                showMessage('Invalid Spotify URL format. Please check the supported formats below the input.', 'error');
+                return;
+            }
+            
+            // Show loading immediately
+            document.getElementById('resultsPanel').classList.add('active');
+            document.getElementById('loadingIndicator').style.display = 'block';
+            document.getElementById('resultsContent').style.display = 'none';
+            
+            // Simulate loading steps
+            const loadingSteps = [
+                'Connecting to Spotify API...',
+                'Fetching playlist data...',
+                'Analyzing audio features...',
+                'Calculating personality traits...'
+            ];
+            
+            let stepIndex = 0;
+            const loadingStepEl = document.getElementById('loadingStep');
+            loadingStepEl.textContent = loadingSteps[0];
+            
+            const stepInterval = setInterval(() => {
+                stepIndex++;
+                if (stepIndex < loadingSteps.length) {
+                    loadingStepEl.textContent = loadingSteps[stepIndex];
+                } else {
+                    clearInterval(stepInterval);
+                }
+            }, 400);
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                clearInterval(stepInterval);
+                // Check if we have sample data for this playlist ID
+                const playlist = samplePlaylists[playlistId];
+                
+                if (playlist) {
+                    // Use sample data
+                    const tracksWithFeatures = playlist.tracks.map(track => calculateDerivedFeatures(track));
+                    performAnalysisWithPlaylistName(tracksWithFeatures, playlist.name);
+                } else {
+                    // Use default sample data for any other playlist ID
+                    const defaultPlaylist = samplePlaylists['37i9dQZF1DXcBWIGoYBM5M'];
+                    const tracksWithFeatures = defaultPlaylist.tracks.map(track => calculateDerivedFeatures(track));
+                    performAnalysisWithPlaylistName(tracksWithFeatures, 'Your Playlist');
+                }
+            }, 1500);
+        }
+
+        // Perform analysis with playlist name
+        function performAnalysisWithPlaylistName(songsList, playlistName) {
+            const traits = calculatePersonality(songsList);
+            const archetype = getArchetype(traits);
+
+            // Update archetype
+            document.getElementById('archetypeEmoji').textContent = archetype.emoji;
+            document.getElementById('archetypeName').textContent = archetype.name;
+
+            // Update radar chart
+            updateRadarChart(traits);
+
+            // Update trait cards
+            updateTraitCards(traits);
+
+            // Update songs list with playlist name
+            updateSongsListWithPlaylistName(songsList, playlistName);
+
+            // Hide loading, show results
+            document.getElementById('loadingIndicator').style.display = 'none';
+            document.getElementById('resultsContent').style.display = 'block';
+
+            showMessage('Analysis complete!', 'success');
+        }
+
+        // Update songs list with playlist name
+        function updateSongsListWithPlaylistName(songsList, playlistName) {
+            const container = document.getElementById('songsList');
+            const header = container.previousElementSibling;
+            header.textContent = `Songs from "${playlistName}"`;
+            
+            container.innerHTML = '';
+
+            songsList.forEach(song => {
+                const item = document.createElement('div');
+                item.className = 'song-list-item';
+                item.innerHTML = `
+                    <span class="artist">${song.artist}</span>
+                    <span class="title">- ${song.title || song.name}</span>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Initialize the app
+        init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+artist,songtitle,genre,year,lyrics_snippet,valence,arousal,negativity,emotion_label,energy,danceability,acousticness,tempo
+Jubin Nautiyal,Tum Hi Ho,Bollywood,1974, Tum Hi Ho...,0.62,0.62,0.44,Happy,0.42,0.83,0.72,147.5
+Kanika Kapoor,Ghoomar,Hip-Hop,2018, Ghoomar...,0.41,0.79,0.05,Excited,0.23,0.34,0.67,148.1
+Neha Kakkar,Kal Ho Naa Ho,Pop,1987, Kal Ho Naa Ho...,0.64,0.39,0.16,Party,0.53,0.41,0.16,149.5
+Shaan,Taal Se Taal,Pop,2016, Taal Se Taal...,0.83,0.3,0.02,Hope,0.8,0.4,0.62,128.8
+Neha Kakkar,Pehla Nasha,Bollywood,1972, Pehla Nasha...,0.83,0.35,0.2,Excited,0.74,0.64,0.17,109.6
+Badshah,Breathless,Traditional,2013, Breathless...,0.56,0.68,0.04,Romantic,0.66,0.21,0.48,76
+Darshan Raval,Baby Doll,Traditional,2023, Baby Doll...,0.52,0.46,0.05,Excited,0.67,0.8,0.77,83.7
+Kishore Kumar,DJ Wale Babu,Bollywood,2023, DJ Wale Babu...,0.42,0.23,0.41,Romantic,0.5,0.89,0.76,121.6
+Mohit Chauhan,Lut Gaye,Traditional,1990, Lut Gaye...,0.89,0.48,0.79,Excited,0.34,0.51,0.76,100.9
+Darshan Raval,Coca Cola,Traditional,1991, Coca Cola...,0.22,0.69,0.74,Romantic,0.51,0.59,0.11,110.7
+Darshan Raval,Lag Ja Gale,Hip-Hop,1994, Lag Ja Gale...,0.67,0.31,0.32,Excited,0.44,0.8,0.44,90.2
+Kanika Kapoor,Chaiyya Chaiyya,Pop,1986, Chaiyya Chaiyya...,0.11,0.4,0.09,Sad,0.71,0.62,0.67,96.1
+Lata Mangeshkar,Badtameez Dil,Pop,2021, Badtameez Dil...,0.43,0.49,0.19,Sad,0.38,0.27,0.61,96.6
+Alka Yagnik,Balam Pichkari,Pop,1976, Balam Pichkari...,0.21,0.51,0.48,Romantic,0.5,0.88,0.27,73.2
+Darshan Raval,Genda Phool,Traditional,1992, Genda Phool...,0.41,0.43,0.6,Party,0.45,0.67,0.47,128.5
+Badshah,Dilbar,Pop,2019, Dilbar...,0.33,0.33,0.66,Sad,0.47,0.73,0.31,98.9
+Yo Yo Honey Singh,Saudagar,Bollywood,2018, Saudagar...,0.74,0.37,0.67,Excited,0.4,0.6,0.78,112.6
+Shaan,Dheere Dheere,Hip-Hop,2025, Dheere Dheere...,0.68,0.85,0.72,Hope,0.37,0.29,0.79,129.9
+Mohit Chauhan,Suraj Hua Madham,Traditional,1973, Suraj Hua Madham...,0.74,0.8,0.49,Excited,0.62,0.37,0.56,122.3
+Sunidhi Chauhan,Channa Mereya,Bollywood,2014, Channa Mereya...,0.26,0.67,0.32,Hope,0.5,0.93,0.48,136.6
+Alka Yagnik,Raabta,Traditional,1976, Raabta...,0.59,0.66,0.78,Sad,0.75,0.86,0.7,87.6
+Darshan Raval,Kabira,Bollywood,1974, Kabira...,0.88,0.58,0.48,Hope,0.56,0.3,0.78,146.9
+Neha Kakkar,Suno Na,Pop,2004, Suno Na...,0.6,0.79,0.17,Happy,0.25,0.75,0.75,129.8
+Jubin Nautiyal,Naino Ki Maasti,Bollywood,1977, Naino Ki Maasti...,0.74,0.46,0.61,Angry,0.45,0.35,0.47,107.6
+Kishore Kumar,Ghar More Pardesiya,Traditional,1970, Ghar More Pardesiya...,0.81,0.41,0.59,Happy,0.3,0.97,0.11,100.7
+Sonu Nigam,O Saathi,Bollywood,2025, O Saathi...,0.29,0.37,0.67,Romantic,0.53,0.75,0.78,142.6
+Arijit Singh,Ghungroo,Traditional,1995, Ghungroo...,0.77,0.73,0.49,Angry,0.66,0.88,0.15,86.1
+Sunidhi Chauhan,Jugnu,Hip-Hop,1974, Jugnu...,0.38,0.38,0.39,Romantic,0.83,0.77,0.32,96.2
+Shreya Ghoshal,Paagal,Traditional,1981, Paagal...,0.13,0.41,0.22,Sad,0.77,0.9,0.48,121.6
+Kumar Sanu,Hook Up Song,Hip-Hop,1992, Hook Up Song...,0.83,0.84,0.64,Joy,0.66,0.59,0.36,146.5
+Asha Bhosle,Muqabla,Pop,2009, Muqabla...,0.68,0.28,0.34,Hope,0.85,0.32,0.2,77.9
+Jubin Nautiyal,Aankh Marey,Pop,1974, Aankh Marey...,0.38,0.43,0.77,Hope,0.54,0.73,0.75,90.9
+Yo Yo Honey Singh,Tera Ban Jaunga,Hip-Hop,2013, Tera Ban Jaunga...,0.2,0.61,0.41,Hope,0.49,0.5,0.7,124
+Shaan,Shayad,Traditional,2000, Shayad...,0.44,0.61,0.13,Excited,0.49,0.84,0.4,96.4
+Shalmali Kholgade,Ve Maahi,Bollywood,1980, Ve Maahi...,0.84,0.76,0.62,Hope,0.57,0.55,0.62,90.7
+Shreya Ghoshal,Vaaste,Bollywood,1981, Vaaste...,0.42,0.64,0.8,Party,0.61,0.25,0.17,80.9
+Shaan,Tera Yaar Hoon Main,Pop,2012, Tera Yaar Hoon Main...,0.2,0.84,0.35,Romantic,0.4,0.4,0.23,76.1
+Lata Mangeshkar,Agar Tum Saath Ho,Pop,2018, Agar Tum Saath Ho...,0.37,0.88,0.52,Sad,0.87,0.82,0.32,141.6
+Darshan Raval,Teri Mitti,Hip-Hop,1985, Teri Mitti...,0.32,0.45,0.17,Sad,0.51,0.3,0.24,118.1
+Udit Narayan,Makhna,Traditional,1970, Makhna...,0.34,0.37,0.65,Angry,0.22,0.3,0.68,138.2
+Mohit Chauhan,Saki Saki,Traditional,1973, Saki Saki...,0.15,0.29,0.26,Excited,0.65,0.81,0.53,81.4
+Shalmali Kholgade,O Saki Saki,Pop,1995, O Saki Saki...,0.39,0.71,0.15,Sad,0.56,0.44,0.3,139.1
+Shreya Ghoshal,Tum Se Hi,Bollywood,1977, Tum Se Hi...,0.21,0.75,0.07,Angry,0.64,0.9,0.36,136.9
+Sonu Nigam,Patakha Guddi,Pop,1983, Patakha Guddi...,0.86,0.37,0.4,Excited,0.61,0.24,0.76,94.5
+Alka Yagnik,Maahi Ve,Pop,1979, Maahi Ve...,0.9,0.77,0.28,Excited,0.4,0.88,0.62,113
+Alka Yagnik,Ramta Jogi,Hip-Hop,2021, Ramta Jogi...,0.2,0.58,0.63,Angry,0.21,0.4,0.63,99.6
+Shreya Ghoshal,Lag Ja Gale,Pop,1977, Lag Ja Gale...,0.13,0.4,0.35,Happy,0.65,0.36,0.29,103.8
+Yo Yo Honey Singh,Kahin Door Jab Din,Hip-Hop,2007, Kahin Door Jab Din...,0.47,0.59,0.55,Party,0.42,0.52,0.72,142.7
+Kumar Sanu,Tujhe Dekha To,Pop,1986, Tujhe Dekha To...,0.16,0.76,0.34,Excited,0.65,0.78,0.34,117.7
+Shalmali Kholgade,Ye Sham Mastani,Hip-Hop,2016, Ye Sham Mastani...,0.36,0.6,0.24,Angry,0.27,0.21,0.15,74.3
+Alka Yagnik,Baharon Phool Barsao,Bollywood,1982, Baharon Phool Barsao...,0.4,0.71,0.32,Angry,0.61,0.86,0.22,73.9
+Shreya Ghoshal,Awaara Hoon,Hip-Hop,1970, Awaara Hoon...,0.31,0.23,0.34,Angry,0.43,0.56,0.61,70.8
+Kumar Sanu,Chupke Chupke,Bollywood,1984, Chupke Chupke...,0.15,0.59,0.64,Hope,0.88,0.7,0.37,147.7
+Darshan Raval,Chura Liya Hai,Pop,2012, Chura Liya Hai...,0.63,0.29,0.84,Hope,0.8,0.45,0.17,104.2
+Asha Bhosle,Dil Diyan Gallan,Traditional,2005, Dil Diyan Gallan...,0.87,0.57,0.76,Angry,0.53,0.51,0.33,78
+Kanika Kapoor,Soch Na Sake,Pop,1982, Soch Na Sake...,0.38,0.46,0.43,Happy,0.85,0.42,0.27,94.5
+Shreya Ghoshal,Baby Bring It On,Hip-Hop,1987, Baby Bring It On...,0.75,0.36,0.82,Joy,0.24,0.74,0.66,122.8
+Kumar Sanu,Barso Re,Traditional,1970, Barso Re...,0.66,0.79,0.48,Excited,0.46,0.32,0.39,135.2
+Kumar Sanu,Bekhayali,Hip-Hop,2006, Bekhayali...,0.49,0.78,0.13,Romantic,0.26,0.66,0.21,107.8
+Shaan,Kesariya,Pop,2000, Kesariya...,0.34,0.23,0.59,Romantic,0.77,0.6,0.41,97.5
+Shaan,Jhoome Jo Pathaan,Bollywood,2025, Jhoome Jo Pathaan...,0.48,0.62,0.55,Happy,0.37,0.96,0.45,87
+Udit Narayan,Jhumka Gira Re,Hip-Hop,1973, Jhumka Gira Re...,0.82,0.26,0.41,Party,0.65,0.25,0.49,87.2
+Kumar Sanu,Kutti Story,Bollywood,1980, Kutti Story...,0.86,0.5,0.51,Excited,0.82,0.29,0.26,75.1
+Sonu Nigam,Kaavaalaa,Pop,1975, Kaavaalaa...,0.79,0.43,0.74,Angry,0.24,0.68,0.34,95.1
+Lata Mangeshkar,Kilimanjaro,Pop,1972, Kilimanjaro...,0.22,0.58,0.25,Romantic,0.71,0.32,0.69,78.5
+Shalmali Kholgade,Pachtoge,Traditional,2003, Pachtoge...,0.38,0.38,0.59,Hope,0.37,0.82,0.69,95.7
+Arijit Singh,Pani Da Rang,Pop,1970, Pani Da Rang...,0.33,0.36,0.72,Happy,0.37,0.55,0.14,80.7
+Kanika Kapoor,Pathala Pathala,Traditional,1989, Pathala Pathala...,0.78,0.38,0.57,Angry,0.51,0.97,0.31,120.6
+Kumar Sanu,Peniviti,Traditional,1977, Peniviti...,0.84,0.43,0.25,Party,0.82,0.69,0.18,125.8
+Yo Yo Honey Singh,Saiyaara,Pop,1976, Saiyaara...,0.81,0.84,0.12,Party,0.55,0.65,0.65,89.9
+Kumar Sanu,Laal Pari,Hip-Hop,2019, Laal Pari...,0.83,0.88,0.66,Excited,0.47,0.28,0.15,147.2
+Badshah,Chor Bazari,Traditional,1981, Chor Bazari...,0.25,0.61,0.56,Excited,0.65,0.72,0.76,149.4
+Jubin Nautiyal,Sapphire,Hip-Hop,1994, Sapphire...,0.12,0.51,0.29,Angry,0.35,0.59,0.8,87.5
+Mohit Chauhan,Finding Her,Pop,1984, Finding Her...,0.63,0.29,0.85,Sad,0.42,0.7,0.66,121.9
+Yo Yo Honey Singh,Millionaire,Traditional,2014, Millionaire...,0.28,0.67,0.79,Happy,0.63,0.45,0.62,77.1
+Sunidhi Chauhan,Kasturi,Hip-Hop,1988, Kasturi...,0.62,0.31,0.38,Hope,0.64,0.72,0.47,87.6
+Shreya Ghoshal,Sapne Mai Milti Hai,Traditional,2002, Sapne Mai Milti Hai...,0.3,0.6,0.56,Hope,0.7,0.71,0.37,123.7
+Kanika Kapoor,Rangeela,Pop,2016, Rangeela...,0.69,0.72,0.64,Party,0.69,0.3,0.34,96.4
+Darshan Raval,Dil Hai Tumhaara,Hip-Hop,1972, Dil Hai Tumhaara...,0.25,0.59,0.51,Hope,0.89,0.39,0.7,112.8
+Vishal Dadlani,Bombay,Bollywood,1974, Bombay...,0.27,0.84,0.07,Hope,0.89,0.26,0.2,76.5
+Lata Mangeshkar,Devdas,Hip-Hop,1970, Devdas...,0.74,0.83,0.82,Romantic,0.58,0.85,0.29,101.4
+Shaan,Anari,Bollywood,2008, Anari...,0.84,0.49,0.52,Romantic,0.55,0.9,0.76,99
+Arijit Singh,Tum Hi Ho,Bollywood,2008, Tum Hi Ho...,0.84,0.67,0.74,Happy,0.51,0.49,0.5,80.6
+Mohit Chauhan,Ghoomar,Hip-Hop,2000, Ghoomar...,0.19,0.25,0.12,Romantic,0.77,0.43,0.61,142.2
+Lata Mangeshkar,Kal Ho Naa Ho,Pop,1996, Kal Ho Naa Ho...,0.53,0.72,0.43,Excited,0.83,0.36,0.65,95.7
+Shreya Ghoshal,Taal Se Taal,Bollywood,2020, Taal Se Taal...,0.63,0.61,0.69,Excited,0.36,0.97,0.6,114.1
+Darshan Raval,Pehla Nasha,Traditional,2014, Pehla Nasha...,0.77,0.43,0.76,Party,0.53,0.7,0.49,138.3
+Shaan,Breathless,Hip-Hop,1985, Breathless...,0.5,0.75,0.79,Angry,0.44,0.77,0.3,95.5
+Kanika Kapoor,Baby Doll,Hip-Hop,2002, Baby Doll...,0.77,0.84,0.05,Hope,0.8,0.64,0.66,118.7
+Neha Kakkar,DJ Wale Babu,Hip-Hop,1997, DJ Wale Babu...,0.2,0.53,0.44,Happy,0.83,0.37,0.31,91.9
+Shalmali Kholgade,Lut Gaye,Hip-Hop,2023, Lut Gaye...,0.65,0.6,0.36,Happy,0.63,0.76,0.24,105.8
+Vishal Dadlani,Coca Cola,Hip-Hop,1980, Coca Cola...,0.67,0.56,0.49,Hope,0.32,0.9,0.76,122.2
+Sonu Nigam,Lag Ja Gale,Hip-Hop,1982, Lag Ja Gale...,0.18,0.26,0.37,Romantic,0.39,0.57,0.17,107.9
+Sunidhi Chauhan,Chaiyya Chaiyya,Traditional,1977, Chaiyya Chaiyya...,0.42,0.46,0.48,Romantic,0.26,0.49,0.43,139.5
+Kumar Sanu,Badtameez Dil,Pop,1996, Badtameez Dil...,0.25,0.72,0.59,Romantic,0.83,0.21,0.64,76.7
+Shankar Mahadevan,Balam Pichkari,Traditional,1988, Balam Pichkari...,0.83,0.9,0.26,Sad,0.29,0.93,0.43,111.8
+Sunidhi Chauhan,Genda Phool,Hip-Hop,2005, Genda Phool...,0.43,0.79,0.34,Hope,0.27,0.62,0.53,94.7
+Sunidhi Chauhan,Dilbar,Hip-Hop,1996, Dilbar...,0.48,0.52,0.04,Happy,0.41,0.64,0.31,116
+Vishal Dadlani,Saudagar,Bollywood,2003, Saudagar...,0.3,0.85,0.7,Romantic,0.61,0.5,0.34,145.6
+Darshan Raval,Dheere Dheere,Pop,2001, Dheere Dheere...,0.78,0.85,0.12,Joy,0.5,0.82,0.43,114.2
